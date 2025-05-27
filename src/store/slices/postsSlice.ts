@@ -1,4 +1,3 @@
-
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface Post {
@@ -10,14 +9,17 @@ export interface Post {
   featuredImage?: string;
   status: 'draft' | 'published';
   categoryId: string;
+  category: string; // Added category name for display
   tags: string[];
   authorId: string;
   authorName: string;
   publishedAt: string;
+  createdAt: string; // Added createdAt
   views: number;
   likes: number;
   shares: number;
   readingTime: number;
+  readTime: number; // Added readTime for compatibility
   seoTitle?: string;
   seoDescription?: string;
 }
@@ -56,14 +58,17 @@ npx create-react-app my-app --template typescript
       featuredImage: '/placeholder.svg',
       status: 'published',
       categoryId: '1',
+      category: 'Technology',
       tags: ['React', 'TypeScript', 'Web Development'],
       authorId: '1',
       authorName: 'Admin User',
       publishedAt: '2024-01-15',
+      createdAt: '2024-01-15',
       views: 1250,
       likes: 45,
       shares: 12,
       readingTime: 5,
+      readTime: 5,
       seoTitle: 'Khám phá React và TypeScript - Hướng dẫn chi tiết',
       seoDescription: 'Tìm hiểu cách sử dụng React với TypeScript để xây dựng ứng dụng web hiện đại và an toàn.'
     }
