@@ -1,4 +1,3 @@
-
 import { Provider } from 'react-redux';
 import { store } from './store';
 import { Toaster } from "@/components/ui/toaster";
@@ -11,6 +10,9 @@ import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
 import NotFound from "./pages/NotFound";
+import ProfilePage from "./pages/ProfilePage";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import PostsManagement from "./pages/admin/PostsManagement";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,12 @@ const App = () => (
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            
+            {/* Admin Routes */}
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/posts" element={<PostsManagement />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
