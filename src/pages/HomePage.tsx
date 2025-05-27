@@ -11,7 +11,8 @@ import { Search, TrendingUp } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const dispatch = useDispatch();
-  const { posts, categories } = useTypedSelector(state => state.posts);
+  const { posts } = useTypedSelector(state => state.posts);
+  const { categories } = useTypedSelector(state => state.categories);
   const { isDark } = useTypedSelector(state => state.theme);
 
   // Get featured posts (published posts)
