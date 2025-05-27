@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { edit, trash-2, file-plus, search } from 'lucide-react';
+import { Edit, Trash2, FilePlus, Search } from 'lucide-react';
 
 const PostsManagement: React.FC = () => {
   const { isDark } = useTypedSelector(state => state.theme);
@@ -26,7 +26,7 @@ const PostsManagement: React.FC = () => {
             Quản lý bài viết
           </h1>
           <Button className="flex items-center space-x-2">
-            <file-plus className="h-4 w-4" />
+            <FilePlus className="h-4 w-4" />
             <span>Tạo bài viết mới</span>
           </Button>
         </div>
@@ -35,7 +35,7 @@ const PostsManagement: React.FC = () => {
         <Card className={isDark ? 'bg-gray-800 border-gray-700' : 'bg-white'}>
           <CardContent className="p-4">
             <div className="relative">
-              <search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+              <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
               <Input
                 placeholder="Tìm kiếm bài viết..."
                 value={searchTerm}
@@ -76,10 +76,10 @@ const PostsManagement: React.FC = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button variant="outline" size="sm">
-                        <edit className="h-4 w-4" />
+                        <Edit className="h-4 w-4" />
                       </Button>
                       <Button variant="outline" size="sm">
-                        <trash-2 className="h-4 w-4" />
+                        <Trash2 className="h-4 w-4" />
                       </Button>
                     </div>
                   </div>

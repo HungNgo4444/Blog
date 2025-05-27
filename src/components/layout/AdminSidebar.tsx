@@ -3,13 +3,13 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { 
-  layout-dashboard, 
-  file-text, 
-  tag, 
-  tags, 
-  user, 
-  bar-chart, 
-  settings 
+  LayoutDashboard, 
+  FileText, 
+  Tag, 
+  Tags, 
+  User, 
+  BarChart, 
+  Settings 
 } from 'lucide-react';
 
 const AdminSidebar: React.FC = () => {
@@ -20,37 +20,37 @@ const AdminSidebar: React.FC = () => {
     {
       name: 'Dashboard',
       path: '/admin',
-      icon: layout-dashboard,
+      icon: LayoutDashboard,
     },
     {
       name: 'Quản lý bài viết',
       path: '/admin/posts',
-      icon: file-text,
+      icon: FileText,
     },
     {
       name: 'Quản lý category',
       path: '/admin/categories',
-      icon: tag,
+      icon: Tag,
     },
     {
       name: 'Quản lý tags',
       path: '/admin/tags',
-      icon: tags,
+      icon: Tags,
     },
     {
       name: 'Quản lý tác giả',
       path: '/admin/authors',
-      icon: user,
+      icon: User,
     },
     {
       name: 'Analytics',
       path: '/admin/analytics',
-      icon: bar-chart,
+      icon: BarChart,
     },
     {
       name: 'Cấu hình',
       path: '/admin/settings',
-      icon: settings,
+      icon: Settings,
     },
   ];
 

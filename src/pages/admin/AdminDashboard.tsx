@@ -4,7 +4,7 @@ import AdminLayout from '../../components/layout/AdminLayout';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { file-text, user, tag, bar-chart } from 'lucide-react';
+import { FileText, User, Tag, BarChart } from 'lucide-react';
 
 const AdminDashboard: React.FC = () => {
   const { isDark } = useTypedSelector(state => state.theme);
@@ -15,25 +15,25 @@ const AdminDashboard: React.FC = () => {
     {
       title: 'Tổng bài viết',
       value: posts.length,
-      icon: file-text,
+      icon: FileText,
       color: 'bg-blue-500',
     },
     {
       title: 'Bài viết published',
       value: posts.filter(post => post.status === 'published').length,
-      icon: file-text,
+      icon: FileText,
       color: 'bg-green-500',
     },
     {
       title: 'Categories',
       value: categories.length,
-      icon: tag,
+      icon: Tag,
       color: 'bg-purple-500',
     },
     {
       title: 'Tổng lượt xem',
       value: posts.reduce((total, post) => total + post.views, 0),
-      icon: bar-chart,
+      icon: BarChart,
       color: 'bg-orange-500',
     },
   ];
